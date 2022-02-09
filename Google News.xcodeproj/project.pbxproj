@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F555E7527B47DEC00461947 /* ArticleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F555E7427B47DEC00461947 /* ArticleItem.swift */; };
 		3F698C0727B3AC6D0013955C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F698C0627B3AC6D0013955C /* AppDelegate.swift */; };
 		3F698C0927B3AC6D0013955C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F698C0827B3AC6D0013955C /* SceneDelegate.swift */; };
 		3F698C0B27B3AC6D0013955C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F698C0A27B3AC6D0013955C /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		075B6AA314029D7FCC325347 /* Pods_Google_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		135A72F6E90344CE3373BB03 /* Pods-Google NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google NewsTests.release.xcconfig"; path = "Target Support Files/Pods-Google NewsTests/Pods-Google NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		17CBA1891E8B22444D190AF9 /* Pods-Google News-Google NewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google News-Google NewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Google News-Google NewsUITests/Pods-Google News-Google NewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F555E7427B47DEC00461947 /* ArticleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleItem.swift; sourceTree = "<group>"; };
 		3F698C0327B3AC6D0013955C /* Google News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F698C0627B3AC6D0013955C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F698C0827B3AC6D0013955C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				3F698C0627B3AC6D0013955C /* AppDelegate.swift */,
 				3F698C0827B3AC6D0013955C /* SceneDelegate.swift */,
 				3F698C0A27B3AC6D0013955C /* ViewController.swift */,
+				3F555E7427B47DEC00461947 /* ArticleItem.swift */,
 				3F698C0C27B3AC6D0013955C /* Main.storyboard */,
 				3F698C0F27B3AC6E0013955C /* Assets.xcassets */,
 				3F698C1127B3AC6E0013955C /* LaunchScreen.storyboard */,
@@ -155,7 +158,6 @@
 				6B25E742F7E79C4FDD8307CC /* Pods-Google NewsTests.debug.xcconfig */,
 				135A72F6E90344CE3373BB03 /* Pods-Google NewsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -411,6 +413,7 @@
 				3F698C0B27B3AC6D0013955C /* ViewController.swift in Sources */,
 				3F698C0727B3AC6D0013955C /* AppDelegate.swift in Sources */,
 				3F698C0927B3AC6D0013955C /* SceneDelegate.swift in Sources */,
+				3F555E7527B47DEC00461947 /* ArticleItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
