@@ -6,8 +6,28 @@
 	<dict>
 		<key>Google News.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3F698C0227B3AC6D0013955C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3F698C1827B3AC6F0013955C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3F698C2327B3AC6F0013955C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

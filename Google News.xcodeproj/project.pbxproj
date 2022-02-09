@@ -15,6 +15,9 @@
 		3F698C1327B3AC6E0013955C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F698C1127B3AC6E0013955C /* LaunchScreen.storyboard */; };
 		3F698C1E27B3AC6F0013955C /* Google_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F698C1D27B3AC6F0013955C /* Google_NewsTests.swift */; };
 		3F698C2927B3AC6F0013955C /* Google_NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F698C2827B3AC6F0013955C /* Google_NewsUITests.swift */; };
+		5B1BC974FAA9D245A002F70A /* Pods_Google_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075B6AA314029D7FCC325347 /* Pods_Google_News.framework */; };
+		68E4DDB54D2057A062DB23D1 /* Pods_Google_News_Google_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF283320F4065F6DFA5268E /* Pods_Google_News_Google_NewsUITests.framework */; };
+		E2DCDFF801670740B6CB0559 /* Pods_Google_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BBD7171CB7CFCE4C05F1A2 /* Pods_Google_NewsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075B6AA314029D7FCC325347 /* Pods_Google_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		135A72F6E90344CE3373BB03 /* Pods-Google NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google NewsTests.release.xcconfig"; path = "Target Support Files/Pods-Google NewsTests/Pods-Google NewsTests.release.xcconfig"; sourceTree = "<group>"; };
+		17CBA1891E8B22444D190AF9 /* Pods-Google News-Google NewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google News-Google NewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Google News-Google NewsUITests/Pods-Google News-Google NewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F698C0327B3AC6D0013955C /* Google News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F698C0627B3AC6D0013955C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F698C0827B3AC6D0013955C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		3F698C2427B3AC6F0013955C /* Google NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Google NewsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F698C2827B3AC6F0013955C /* Google_NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_NewsUITests.swift; sourceTree = "<group>"; };
 		3F698C2A27B3AC6F0013955C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41BBD7171CB7CFCE4C05F1A2 /* Pods_Google_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F60C10221680167067633B7 /* Pods-Google News-Google NewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google News-Google NewsUITests.release.xcconfig"; path = "Target Support Files/Pods-Google News-Google NewsUITests/Pods-Google News-Google NewsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B25E742F7E79C4FDD8307CC /* Pods-Google NewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google NewsTests.debug.xcconfig"; path = "Target Support Files/Pods-Google NewsTests/Pods-Google NewsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		80645B41B6D4984F66354D08 /* Pods-Google News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google News.debug.xcconfig"; path = "Target Support Files/Pods-Google News/Pods-Google News.debug.xcconfig"; sourceTree = "<group>"; };
+		AE735B14B85ABE29A572269F /* Pods-Google News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google News.release.xcconfig"; path = "Target Support Files/Pods-Google News/Pods-Google News.release.xcconfig"; sourceTree = "<group>"; };
+		FCF283320F4065F6DFA5268E /* Pods_Google_News_Google_NewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_News_Google_NewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1BC974FAA9D245A002F70A /* Pods_Google_News.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DCDFF801670740B6CB0559 /* Pods_Google_NewsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E4DDB54D2057A062DB23D1 /* Pods_Google_News_Google_NewsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				3F698C1C27B3AC6F0013955C /* Google NewsTests */,
 				3F698C2727B3AC6F0013955C /* Google NewsUITests */,
 				3F698C0427B3AC6D0013955C /* Products */,
+				E2D6AFF9AE100179FEBB1F3C /* Pods */,
+				E7A720FC77F36D4B3A360D9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,30 @@
 			path = "Google NewsUITests";
 			sourceTree = "<group>";
 		};
+		E2D6AFF9AE100179FEBB1F3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80645B41B6D4984F66354D08 /* Pods-Google News.debug.xcconfig */,
+				AE735B14B85ABE29A572269F /* Pods-Google News.release.xcconfig */,
+				17CBA1891E8B22444D190AF9 /* Pods-Google News-Google NewsUITests.debug.xcconfig */,
+				4F60C10221680167067633B7 /* Pods-Google News-Google NewsUITests.release.xcconfig */,
+				6B25E742F7E79C4FDD8307CC /* Pods-Google NewsTests.debug.xcconfig */,
+				135A72F6E90344CE3373BB03 /* Pods-Google NewsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E7A720FC77F36D4B3A360D9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				075B6AA314029D7FCC325347 /* Pods_Google_News.framework */,
+				FCF283320F4065F6DFA5268E /* Pods_Google_News_Google_NewsUITests.framework */,
+				41BBD7171CB7CFCE4C05F1A2 /* Pods_Google_NewsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F698C2D27B3AC6F0013955C /* Build configuration list for PBXNativeTarget "Google News" */;
 			buildPhases = (
+				A9DB0E72082047FC72427005 /* [CP] Check Pods Manifest.lock */,
 				3F698BFF27B3AC6D0013955C /* Sources */,
 				3F698C0027B3AC6D0013955C /* Frameworks */,
 				3F698C0127B3AC6D0013955C /* Resources */,
+				E821B45167EB6D507C92AE2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F698C3027B3AC6F0013955C /* Build configuration list for PBXNativeTarget "Google NewsTests" */;
 			buildPhases = (
+				7868B6335453F5D92F880FEA /* [CP] Check Pods Manifest.lock */,
 				3F698C1527B3AC6F0013955C /* Sources */,
 				3F698C1627B3AC6F0013955C /* Frameworks */,
 				3F698C1727B3AC6F0013955C /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F698C3327B3AC6F0013955C /* Build configuration list for PBXNativeTarget "Google NewsUITests" */;
 			buildPhases = (
+				C7DA4137BD4ECD808800755D /* [CP] Check Pods Manifest.lock */,
 				3F698C2027B3AC6F0013955C /* Sources */,
 				3F698C2127B3AC6F0013955C /* Frameworks */,
 				3F698C2227B3AC6F0013955C /* Resources */,
+				A94A4EA815679E1860F0476E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +299,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7868B6335453F5D92F880FEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google NewsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A94A4EA815679E1860F0476E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google News-Google NewsUITests/Pods-Google News-Google NewsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google News-Google NewsUITests/Pods-Google News-Google NewsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google News-Google NewsUITests/Pods-Google News-Google NewsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9DB0E72082047FC72427005 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google News-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7DA4137BD4ECD808800755D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google News-Google NewsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E821B45167EB6D507C92AE2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google News/Pods-Google News-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google News/Pods-Google News-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google News/Pods-Google News-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F698BFF27B3AC6D0013955C /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		3F698C2E27B3AC6F0013955C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80645B41B6D4984F66354D08 /* Pods-Google News.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +600,7 @@
 		};
 		3F698C2F27B3AC6F0013955C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE735B14B85ABE29A572269F /* Pods-Google News.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +619,7 @@
 		};
 		3F698C3127B3AC6F0013955C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B25E742F7E79C4FDD8307CC /* Pods-Google NewsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +642,7 @@
 		};
 		3F698C3227B3AC6F0013955C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 135A72F6E90344CE3373BB03 /* Pods-Google NewsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +665,7 @@
 		};
 		3F698C3427B3AC6F0013955C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17CBA1891E8B22444D190AF9 /* Pods-Google News-Google NewsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +686,7 @@
 		};
 		3F698C3527B3AC6F0013955C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F60C10221680167067633B7 /* Pods-Google News-Google NewsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
