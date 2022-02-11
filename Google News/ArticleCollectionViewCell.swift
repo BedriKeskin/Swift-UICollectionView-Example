@@ -8,9 +8,14 @@
 
 import UIKit
 
-class ArticleCollectionViewCell: UICollectionViewCell {
+@IBDesignable class ArticleCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblContent: UILabel!
     
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+        }
+    }
 }
