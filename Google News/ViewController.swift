@@ -98,7 +98,7 @@ class ViewController: UIViewController {
     
     @objc
     private func didPullToRefresh(_ sender: Any) {
-        _ = try! self.db!.prepare("DELETE FROM NewsApiTable")
+        _ = try! self.db!.run("DELETE FROM NewsApiTable")
         articles = []
         self.collectionView.reloadData()
 
@@ -109,8 +109,6 @@ class ViewController: UIViewController {
                        }
                    }
                }
-        print("collectionView.numberOfItems(inSection: 0)")
-        print(collectionView.numberOfItems(inSection: 0))
         refreshControl.endRefreshing()
     }
 
