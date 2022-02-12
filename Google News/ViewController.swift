@@ -9,11 +9,10 @@
 import UIKit
 import Foundation
 import SQLite
-import WebKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var webView: WKWebView!
+    
     var db: Connection?
     let NewsApiTable = Table("NewsApiTable")
     var articles = [Article]()
@@ -23,7 +22,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        webView.navigationDelegate = self
         refreshControl.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
         collectionView.alwaysBounceVertical = true
         collectionView.refreshControl = refreshControl
@@ -143,7 +141,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if URL(string: articles[indexPath.row].url!) != nil {
-            self.performSegue(withIdentifier: "toWebPage", sender: self)        }
+            self.performSegue(withIdentifier: "toWebPage", sender: self)
+        }
     }
 }
 
@@ -155,25 +154,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         let height: CGFloat = 350
         
         return CGSize(width: width, height: height)
-    }
-}
-
-extension ViewController: WKNavigationDelegate {
-    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        
-        guard let url = navigationAction.request.url else{
-            decisionHandler(.allow)
-            return
-        }
-        
-        let urlString = url.absoluteString.lowercased()
-        if urlString.starts(with: "http://") || urlString.starts(with: "https://") {
-            decisionHandler(.cancel)
-            UIApplication.shared.open(url, options: [:])
-        } else {
-            decisionHandler(.allow)
-        }
-        
     }
 }
 
