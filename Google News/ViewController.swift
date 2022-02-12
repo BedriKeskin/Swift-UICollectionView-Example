@@ -144,7 +144,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = self.view.frame.width - 10 * 2
-        let height: CGFloat = 350
+        let height: CGFloat = 250
         
         return CGSize(width: width, height: height)
     }

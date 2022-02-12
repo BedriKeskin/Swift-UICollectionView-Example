@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,52 +27,51 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-Eb-ePI">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="16" minimumInteritemSpacing="16" id="J9R-VI-zwx">
-                                    <size key="itemSize" width="374" height="234"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="J9R-VI-zwx">
+                                    <size key="itemSize" width="300" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCell" id="qOL-Lc-whv" customClass="ArticleCollectionViewCell" customModule="Google_News" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="16" width="374" height="234"/>
+                                        <rect key="frame" x="57" y="16" width="300" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="234"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0KJ-VG-gH5">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8tW-oo-ZO4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="317.5" height="105"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8tW-oo-ZO4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqO-js-Zmo" userLabel="lblTitle">
-                                                    <rect key="frame" x="0.0" y="52.5" width="317.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqO-js-Zmo" userLabel="lblTitle">
+                                                    <rect key="frame" x="0.0" y="100" width="300" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label Label Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-Uy-2ho" userLabel="lblContent">
-                                                    <rect key="frame" x="0.0" y="73.5" width="317.5" height="31.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-Uy-2ho" userLabel="lblContent">
+                                                    <rect key="frame" x="0.0" y="140" width="300" height="60"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="cLk-Uy-2ho" firstAttribute="width" secondItem="qOL-Lc-whv" secondAttribute="width" id="4Kd-Xf-tj6"/>
-                                            <constraint firstItem="BqO-js-Zmo" firstAttribute="height" secondItem="qOL-Lc-whv" secondAttribute="height" multiplier="0.2" id="CZf-0h-IA5"/>
-                                            <constraint firstItem="BqO-js-Zmo" firstAttribute="top" secondItem="qOL-Lc-whv" secondAttribute="topMargin" constant="44.5" id="KRS-dz-QQS"/>
-                                            <constraint firstItem="cLk-Uy-2ho" firstAttribute="centerX" secondItem="qOL-Lc-whv" secondAttribute="centerX" id="TLS-xx-FkR"/>
-                                            <constraint firstItem="8tW-oo-ZO4" firstAttribute="width" secondItem="qOL-Lc-whv" secondAttribute="width" id="bBr-9T-Qkr"/>
-                                            <constraint firstItem="cLk-Uy-2ho" firstAttribute="top" secondItem="BqO-js-Zmo" secondAttribute="bottom" id="faB-Bs-cUR"/>
-                                            <constraint firstItem="BqO-js-Zmo" firstAttribute="width" secondItem="qOL-Lc-whv" secondAttribute="width" id="idn-Cz-zRA"/>
-                                            <constraint firstItem="cLk-Uy-2ho" firstAttribute="height" secondItem="qOL-Lc-whv" secondAttribute="height" multiplier="0.3" id="jzF-tl-VAi"/>
-                                            <constraint firstItem="8tW-oo-ZO4" firstAttribute="centerX" secondItem="qOL-Lc-whv" secondAttribute="centerX" id="sJK-pc-Fec"/>
-                                            <constraint firstItem="BqO-js-Zmo" firstAttribute="centerX" secondItem="qOL-Lc-whv" secondAttribute="centerX" id="t3T-cQ-4VA"/>
-                                            <constraint firstAttribute="bottom" secondItem="cLk-Uy-2ho" secondAttribute="bottom" id="u5p-gc-cjK"/>
-                                            <constraint firstItem="8tW-oo-ZO4" firstAttribute="centerY" secondItem="qOL-Lc-whv" secondAttribute="centerY" id="wlQ-2a-cNo"/>
-                                            <constraint firstItem="8tW-oo-ZO4" firstAttribute="height" secondItem="qOL-Lc-whv" secondAttribute="height" id="zCO-ss-foC"/>
-                                        </constraints>
+                                            <constraints>
+                                                <constraint firstItem="cLk-Uy-2ho" firstAttribute="width" secondItem="0KJ-VG-gH5" secondAttribute="width" id="4Kd-Xf-tj6"/>
+                                                <constraint firstItem="BqO-js-Zmo" firstAttribute="height" secondItem="0KJ-VG-gH5" secondAttribute="height" multiplier="0.2" id="CZf-0h-IA5"/>
+                                                <constraint firstItem="cLk-Uy-2ho" firstAttribute="centerX" secondItem="0KJ-VG-gH5" secondAttribute="centerX" id="TLS-xx-FkR"/>
+                                                <constraint firstItem="8tW-oo-ZO4" firstAttribute="width" secondItem="0KJ-VG-gH5" secondAttribute="width" id="bBr-9T-Qkr"/>
+                                                <constraint firstItem="cLk-Uy-2ho" firstAttribute="top" secondItem="BqO-js-Zmo" secondAttribute="bottom" id="faB-Bs-cUR"/>
+                                                <constraint firstItem="BqO-js-Zmo" firstAttribute="width" secondItem="0KJ-VG-gH5" secondAttribute="width" id="idn-Cz-zRA"/>
+                                                <constraint firstItem="cLk-Uy-2ho" firstAttribute="height" secondItem="0KJ-VG-gH5" secondAttribute="height" multiplier="0.3" id="jzF-tl-VAi"/>
+                                                <constraint firstItem="8tW-oo-ZO4" firstAttribute="centerX" secondItem="0KJ-VG-gH5" secondAttribute="centerX" id="sJK-pc-Fec"/>
+                                                <constraint firstItem="BqO-js-Zmo" firstAttribute="centerX" secondItem="0KJ-VG-gH5" secondAttribute="centerX" id="t3T-cQ-4VA"/>
+                                                <constraint firstAttribute="bottom" secondItem="cLk-Uy-2ho" secondAttribute="bottom" id="u5p-gc-cjK"/>
+                                                <constraint firstItem="8tW-oo-ZO4" firstAttribute="centerY" secondItem="0KJ-VG-gH5" secondAttribute="centerY" id="wlQ-2a-cNo"/>
+                                                <constraint firstItem="8tW-oo-ZO4" firstAttribute="height" secondItem="0KJ-VG-gH5" secondAttribute="height" id="zCO-ss-foC"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <integer key="value" value="8"/>
