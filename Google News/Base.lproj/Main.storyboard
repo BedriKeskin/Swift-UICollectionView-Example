@@ -15,6 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8T-cz-OZh">
+                                <rect key="frame" x="87" y="389" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-Eb-ePI">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -50,14 +58,11 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="cLk-Uy-2ho" firstAttribute="top" secondItem="BqO-js-Zmo" secondAttribute="bottom" id="0Xq-1R-VGC"/>
                                             <constraint firstItem="cLk-Uy-2ho" firstAttribute="width" secondItem="qOL-Lc-whv" secondAttribute="width" id="4Kd-Xf-tj6"/>
                                             <constraint firstItem="BqO-js-Zmo" firstAttribute="height" secondItem="qOL-Lc-whv" secondAttribute="height" multiplier="0.2" id="CZf-0h-IA5"/>
-                                            <constraint firstItem="cLk-Uy-2ho" firstAttribute="top" secondItem="BqO-js-Zmo" secondAttribute="bottom" id="J2L-Rr-W7p"/>
                                             <constraint firstItem="BqO-js-Zmo" firstAttribute="top" secondItem="qOL-Lc-whv" secondAttribute="topMargin" constant="44.5" id="KRS-dz-QQS"/>
                                             <constraint firstItem="cLk-Uy-2ho" firstAttribute="centerX" secondItem="qOL-Lc-whv" secondAttribute="centerX" id="TLS-xx-FkR"/>
                                             <constraint firstItem="8tW-oo-ZO4" firstAttribute="width" secondItem="qOL-Lc-whv" secondAttribute="width" id="bBr-9T-Qkr"/>
-                                            <constraint firstItem="cLk-Uy-2ho" firstAttribute="top" secondItem="BqO-js-Zmo" secondAttribute="bottom" id="cRX-2K-6wA"/>
                                             <constraint firstItem="cLk-Uy-2ho" firstAttribute="top" secondItem="BqO-js-Zmo" secondAttribute="bottom" id="faB-Bs-cUR"/>
                                             <constraint firstItem="BqO-js-Zmo" firstAttribute="width" secondItem="qOL-Lc-whv" secondAttribute="width" id="idn-Cz-zRA"/>
                                             <constraint firstItem="cLk-Uy-2ho" firstAttribute="height" secondItem="qOL-Lc-whv" secondAttribute="height" multiplier="0.3" id="jzF-tl-VAi"/>
@@ -83,15 +88,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="J8T-cz-OZh" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.156479" id="97F-Bp-wpW"/>
                             <constraint firstItem="Scq-Eb-ePI" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Ajg-tR-rq8"/>
                             <constraint firstItem="Scq-Eb-ePI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Moy-bf-LgF"/>
                             <constraint firstItem="Scq-Eb-ePI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SSk-PG-XRI"/>
+                            <constraint firstItem="J8T-cz-OZh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VAV-1K-373"/>
+                            <constraint firstItem="J8T-cz-OZh" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.57971" id="ftL-ga-qkK"/>
+                            <constraint firstItem="J8T-cz-OZh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i2g-Y8-uHl"/>
                             <constraint firstItem="Scq-Eb-ePI" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="iLo-Cr-j77"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Scq-Eb-ePI" id="xJr-Wr-jVK"/>
+                        <outlet property="webView" destination="J8T-cz-OZh" id="v7p-NS-De1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

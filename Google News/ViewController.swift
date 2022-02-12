@@ -9,9 +9,11 @@
 import UIKit
 import Foundation
 import SQLite
+import WebKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var webView: WKWebView!
     var db: Connection?
     let NewsApiTable = Table("NewsApiTable")
     var articles = [Article]()
@@ -21,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        webView.navigationDelegate = self
         refreshControl.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
         collectionView.alwaysBounceVertical = true
         collectionView.refreshControl = refreshControl
@@ -119,7 +122,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCell", for: indexPath) as? ArticleCollectionViewCell {
             
-            cell.ImageView.image = UIImage(named: "Image.png")
+            cell.ImageView.imageFromServerURL(urlString: article.urlToImage!)
             cell.lblTitle.text = article.title
             cell.lblContent.text = article.content
             return cell
@@ -145,22 +148,41 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         
         return CGSize(width: width, height: height)
     }
-    
-    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-           
-           guard let url = navigationAction.request.url else{
-               decisionHandler(.allow)
-               return
-           }
-           
-           let urlString = url.absoluteString.lowercased()
-           if urlString.starts(with: "http://") || urlString.starts(with: "https://") {
-               decisionHandler(.cancel)
-               UIApplication.shared.open(url, options: [:])
-           } else {
-               decisionHandler(.allow)
-           }
-           
-       }
 }
 
+extension ViewController: WKNavigationDelegate {
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        guard let url = navigationAction.request.url else{
+            decisionHandler(.allow)
+            return
+        }
+        
+        let urlString = url.absoluteString.lowercased()
+        if urlString.starts(with: "http://") || urlString.starts(with: "https://") {
+            decisionHandler(.cancel)
+            UIApplication.shared.open(url, options: [:])
+        } else {
+            decisionHandler(.allow)
+        }
+        
+    }
+}
+
+extension UIImageView {
+public func imageFromServerURL(urlString: String) {
+    self.image = nil
+    let urlStringNew = urlString.replacingOccurrences(of: " ", with: "%20")
+    URLSession.shared.dataTask(with: NSURL(string: urlStringNew)! as URL, completionHandler: { (data, response, error) -> Void in
+
+        if error != nil {
+            print(error as Any)
+            return
+        }
+        DispatchQueue.main.async(execute: { () -> Void in
+            let image = UIImage(data: data!)
+            self.image = image
+        })
+
+    }).resume()
+}}
