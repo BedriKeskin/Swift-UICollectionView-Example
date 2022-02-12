@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     
     fileprivate func getNews(completionHandler: @escaping () -> ()) {
         let session = URLSession(configuration: .default)
-        let url = NSURL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=aa9436a462cb41c7a6b08cb71d1d9ad9")
+        let url = NSURL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=WriteYourOwnApiKeyHere")
         var request = URLRequest(url: url! as URL)
         request.httpMethod = "GET"
         let task = session.dataTask(with: request) { data, response, error in
