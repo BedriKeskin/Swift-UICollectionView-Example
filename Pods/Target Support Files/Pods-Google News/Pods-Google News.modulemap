@@ -1,0 +1,6 @@
+framework module Pods_Google_News {
+  umbrella header "Pods-Google News-umbrella.h"
+
+  export *
+  module * { export * }
+}
