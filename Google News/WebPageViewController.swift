@@ -11,6 +11,7 @@ import WebKit
 
 class WebPageViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var webView: WKWebView!
+    
     var link = String()
     
     override func viewDidLoad() {
