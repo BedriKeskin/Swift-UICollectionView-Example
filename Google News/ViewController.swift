@@ -99,17 +99,26 @@ class ViewController: UIViewController {
         _ = try! self.db!.run("DELETE FROM NewsApiTable")
         articles = []
         self.collectionView.reloadData()
-
+        
         getNews {
-                   self.reloadCollectionView{
-                       DispatchQueue.main.async {
-                           self.collectionView.reloadData()
-                       }
-                   }
-               }
+            self.reloadCollectionView{
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
         refreshControl.endRefreshing()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toWebPage" {
+            if let indexPath = collectionView?.indexPathsForSelectedItems?.first {
+                let destination = segue.destination as? WebPageViewController
+                destination?.link = articles[indexPath.row].url!
+                print(indexPath.row, articles[indexPath.row])
+            }
+        }
+    }
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -125,6 +134,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             cell.ImageView.imageFromServerURL(urlString: article.urlToImage!)
             cell.lblTitle.text = article.title
             cell.lblContent.text = article.content
+            
             return cell
         } else {
             return UICollectionViewCell()
@@ -132,10 +142,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let url = URL(string: articles[indexPath.row].url!) {
-            print(url)
-            UIApplication.shared.open(url, options: [:])
-        }
+        if URL(string: articles[indexPath.row].url!) != nil {
+            self.performSegue(withIdentifier: "toWebPage", sender: self)        }
     }
 }
 
@@ -170,19 +178,19 @@ extension ViewController: WKNavigationDelegate {
 }
 
 extension UIImageView {
-public func imageFromServerURL(urlString: String) {
-    self.image = nil
-    let urlStringNew = urlString.replacingOccurrences(of: " ", with: "%20")
-    URLSession.shared.dataTask(with: NSURL(string: urlStringNew)! as URL, completionHandler: { (data, response, error) -> Void in
-
-        if error != nil {
-            print(error as Any)
-            return
-        }
-        DispatchQueue.main.async(execute: { () -> Void in
-            let image = UIImage(data: data!)
-            self.image = image
-        })
-
-    }).resume()
-}}
+    public func imageFromServerURL(urlString: String) {
+        self.image = nil
+        let urlStringNew = urlString.replacingOccurrences(of: " ", with: "%20")
+        URLSession.shared.dataTask(with: NSURL(string: urlStringNew)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error as Any)
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                self.image = image
+            })
+        }).resume()
+    }
+}
