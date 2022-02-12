@@ -74,15 +74,10 @@ class ViewController: UIViewController {
             for article in newsapiresults.articles {
                 do {
                     let insert = try self.NewsApiTable.insert(article)
-                    let id = try self.db!.run(insert)
-                    print(id)
+                    _ = try self.db!.run(insert)
                 } catch {
                     print(error)
                 }
-                
-                /* let anarticle:Article = Article(source: article.source, author: article.author, title: article.title, articleDescription: article.articleDescription, url: article.url, urlToImage: article.urlToImage, publishedAt: article.publishedAt, content: article.content)
-                 self.articles.append(article) */
-                
             }
             completionHandler()
         }
@@ -132,6 +127,13 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             return UICollectionViewCell()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let url = URL(string: articles[indexPath.row].url!) {
+            print(url)
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
@@ -143,5 +145,22 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         
         return CGSize(width: width, height: height)
     }
+    
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+           
+           guard let url = navigationAction.request.url else{
+               decisionHandler(.allow)
+               return
+           }
+           
+           let urlString = url.absoluteString.lowercased()
+           if urlString.starts(with: "http://") || urlString.starts(with: "https://") {
+               decisionHandler(.cancel)
+               UIApplication.shared.open(url, options: [:])
+           } else {
+               decisionHandler(.allow)
+           }
+           
+       }
 }
 

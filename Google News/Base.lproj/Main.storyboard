@@ -17,7 +17,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-Eb-ePI">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="16" minimumInteritemSpacing="16" id="J9R-VI-zwx">
                                     <size key="itemSize" width="374" height="234"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,7 +34,6 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8tW-oo-ZO4">
                                                     <rect key="frame" x="0.0" y="0.0" width="317.5" height="105"/>
-                                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqO-js-Zmo" userLabel="lblTitle">
                                                     <rect key="frame" x="0.0" y="52.5" width="317.5" height="21"/>
@@ -50,7 +49,6 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.8387941122" green="0.67510825399999996" blue="0.32780039309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="cLk-Uy-2ho" firstAttribute="top" secondItem="BqO-js-Zmo" secondAttribute="bottom" id="0Xq-1R-VGC"/>
                                             <constraint firstItem="cLk-Uy-2ho" firstAttribute="width" secondItem="qOL-Lc-whv" secondAttribute="width" id="4Kd-Xf-tj6"/>
